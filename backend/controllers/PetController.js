@@ -309,7 +309,7 @@ module.exports = class PetController {
 
     pet.available = false
 
-    await Pet.findByAndUpdate(id, pet)
+    await Pet.findByIdAndUpdate(id, pet)
 
     res.status(200).json({
       message: 'Parabéns, o ciclo de adoção foi concluído com sucesso!',
