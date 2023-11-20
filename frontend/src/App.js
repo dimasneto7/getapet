@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch } from 'react-router-dom'
 import Footer from './components/layout/Footer'
 import Navbar from './components/layout/Navbar'
 import Container from './components/layout/Container'
+import Message from './components/layout/Message'
 
 // Pages
 import Login from './components/pages/Auth/Login'
@@ -18,6 +19,7 @@ function App() {
     <Router>
       <UserProvider>
         <Navbar />
+        <Message />
         <Container>
           <Switch>
             <Router path="/login">
