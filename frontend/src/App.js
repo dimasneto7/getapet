@@ -11,6 +11,8 @@ import Login from './components/pages/Auth/Login'
 import Register from './components/pages/Auth/Register'
 import Home from './components/pages/Home'
 import Profile from './components/pages/User/Profile'
+import MyPets from './components/pages/Pets/MyPets'
+import AddPet from './components/pages/Pets/AddPet'
 
 // Context
 import { UserProvider } from './context/UserContext'
@@ -31,6 +33,12 @@ function App() {
             </Router>
             <Router path="/user/profile">
               <Profile />
+            </Router>
+            <Router path="/pets/mypets">
+              <MyPets />
+            </Router>
+            <Router path="/pet/add">
+              <AddPet />
             </Router>
             <Router path="/">
               <Home />

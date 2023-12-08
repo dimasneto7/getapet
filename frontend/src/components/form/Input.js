@@ -15,10 +15,11 @@ function Input({
       <input
         type={type}
         name={name}
+        id={name}
         placeholder={placeholder}
         onChange={handleOnChange}
         value={value}
-        {...(multiple ? multiple : '')}
+        {...(multiple ? { multiple } : '')}
       />
     </div>
   )
