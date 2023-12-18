@@ -1,18 +1,18 @@
-import { BrowserRouter as Router, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 // Components
-import Footer from './components/layout/Footer'
 import Navbar from './components/layout/Navbar'
-import Container from './components/layout/Container'
+import Footer from './components/layout/Footer'
 import Message from './components/layout/Message'
+import Container from './components/layout/Container'
 
 // Pages
+import Home from './components/pages/Home'
 import Login from './components/pages/Auth/Login'
 import Register from './components/pages/Auth/Register'
-import Home from './components/pages/Home'
 import Profile from './components/pages/User/Profile'
-import MyPets from './components/pages/Pets/MyPets'
-import AddPet from './components/pages/Pets/AddPet'
+import AddPet from './components/pages/Pet/AddPet'
+import MyPets from './components/pages/Pet/MyPets'
 
 // Context
 import { UserProvider } from './context/UserContext'
@@ -25,24 +25,24 @@ function App() {
         <Message />
         <Container>
           <Switch>
-            <Router path="/login">
+            <Route path="/login">
               <Login />
-            </Router>
-            <Router path="/register">
+            </Route>
+            <Route path="/register">
               <Register />
-            </Router>
-            <Router path="/user/profile">
+            </Route>
+            <Route path="/user/profile">
               <Profile />
-            </Router>
-            <Router path="/pets/mypets">
-              <MyPets />
-            </Router>
-            <Router path="/pet/add">
+            </Route>
+            <Route path="/pet/add">
               <AddPet />
-            </Router>
-            <Router path="/">
+            </Route>
+            <Route path="/pet/mypets">
+              <MyPets />
+            </Route>
+            <Route path="/">
               <Home />
-            </Router>
+            </Route>
           </Switch>
         </Container>
         <Footer />

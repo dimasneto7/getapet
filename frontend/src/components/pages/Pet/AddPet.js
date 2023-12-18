@@ -45,8 +45,9 @@ function AddPet() {
 
     setFlashMessage(data.message, msgType)
 
+    history.push('/pets/mypets')
+
     if (msgType !== 'error') {
-      history.push(`/pets/mypets`)
     }
   }
 
