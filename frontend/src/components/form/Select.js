@@ -1,4 +1,3 @@
-import PetForm from './PetForm'
 import styles from './Select.module.css'
 
 function Select({ text, name, options, handleOnChange, value }) {
